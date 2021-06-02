@@ -1,0 +1,29 @@
+﻿@model List<Project.Models.VideoData>
+@{
+    ViewBag.Title = "VedioAndImg";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+<h2>Video And Img</h2>
+
+
+
+
+@foreach (var s in Model)
+{
+
+    <video width="900" height="500" controls>
+        <source src="@s.FilePath" type="@s.ConType">
+        Your browser doe not support the video tag.
+    </video>
+    <br />
+    <br />
+    <br />
+}
+<br />
+<div class="button-alert1">
+    <a href="ImageDataPV?@TempData["url"]"><input type="submit" name="Submit"  value="View Images"></a>
+</div>
+<br />
+<br />
+<br />

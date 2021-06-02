@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT ('MainCategory', RESEED, 0)

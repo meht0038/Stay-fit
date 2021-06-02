@@ -1,0 +1,19 @@
+﻿@model List<Project.Models.ImageData>
+@{
+    ViewBag.Title = "VedioAndImg";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+
+
+
+
+@foreach (var s in Model)
+{
+    string imgu = "data:image/jpg;base64," + Convert.ToBase64String((byte[])@s.Image);
+    <img src='@imgu' >
+
+
+}
+
+<br/>

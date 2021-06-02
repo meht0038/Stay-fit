@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "VideoData";
+    Layout = "~/_LayoutAdmin.cshtml";
+}
+
+
+<br />
+<form action="VideoData" method="post" enctype="multipart/form-data">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading">Add Video</div>
+        <div class="panel-body">
+            <fieldset class="input">
+
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Main Category Name</label>
+                    @Html.DropDownList("Name", ViewBag.NameList as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control", onchange = "document.forms[0].submit();" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">SubCategory Name</label>
+                    @Html.DropDownList("sub", ViewBag.sublist as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control", onchange = "document.forms[0].submit();" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">SubCategory Name</label>
+                    @Html.DropDownList("subsub", ViewBag.subsublist as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control"})
+                </p>
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Video</label>
+                    <input id="modlgn_username" type="file" name="postedFile" class="inputbox" size="18">
+
+                </p>
+
+
+                <div class="clear"> </div>
+                <p id="login-form-username">
+                   
+
+            <input type="submit" formaction="SaveVideoData" style="float:left" name="Submit" class="button" value="Save"><div class="clear"></div>
+        </p>
+
+
+
+            </fieldset>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "SubSubCategory";
+    Layout = "~/_LayoutAdmin.cshtml";
+}
+
+<br />
+<form action="SaveSubSubCategory" method="post" enctype="multipart/form-data">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading">Add Sub_SubCategory</div>
+        <div class="panel-body">
+            <fieldset class="input">
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">SubCategory Name</label>
+                    @Html.DropDownList("MainCategory", ViewBag.NameList as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Sub_SubCategory Name</label>
+                    <input id="modlgn_username" type="text" placeholder="Select your Category" name="Sub_SubCategoryName" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Sub_SubCategory Image</label>
+                    <input id="modlgn_username" type="file" name="postedFile" class="inputbox" size="18">
+
+                </p>
+
+
+
+                <div class="clear"> </div>
+                <p id="login-form-username">
+                    <input type="submit" style="float:left" name="Submit" class="button" value="Save"><div class="clear"></div>
+                </p>
+
+
+
+            </fieldset>
+        </div>
+    </div>
+</form>
+

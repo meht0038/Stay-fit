@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+
+<div class="main">
+    <div class="about_banner_img"><img src="~/images/price.jpg" class="img-responsive" alt="" /></div>
+    <div class="about_banner_wrap">
+        <h1 class="m_11">CONTACT</h1>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="border"> </div>
+<div class="rwo contact">
+    <div class="container">
+        <div class="col-md-8 contact-top">
+            <h3>Send us a message</h3>
+            <p class="contact_msg">For any query.</p>
+            <form method="post">
+                <div class="to">
+                    <input type="text" class="text" name="Name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                    <input type="text" class="text" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:20px">
+                    <input type="text" class="text"name="Subject" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left:20px">
+                </div>
+                <div class="text">
+                    <textarea name="Message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+                </div>
+                <div class="form-submit1">
+                    <input name="submit" type="submit" formaction="SaveContact" formmethod="post" id="submit" value="Submit Your Message"><br>
+                    <p class="m_msg">Make sure you put a valid email</p>
+                </div>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="col-md-4 contact-top_right">
+            <h3>contact info</h3>
+            <br>
+            <ul class="contact_info">
+                <li><i class="mobile"> </i><span>+91-9408388380</span></li>
+                <li><i class="message"> </i><span class="msg"><a href="mailto:example@mail.com">dhruvmehta621@gmail.com</a></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />

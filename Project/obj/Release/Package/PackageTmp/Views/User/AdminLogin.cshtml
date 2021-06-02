@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "AdminLogin";
+    Layout = "~/_LayoutAdmin.cshtml";
+}
+
+
+
+
+<div class="login_top">
+    <div class="container">
+        <div class="col-md-6">
+            <div class="login-page">
+                <h4 class="title">New Admin</h4>
+                <p>"Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.The mind is the limit. As long as the mind can envision the fact that you can do something, you can do it, as long as you really believe 100 percent.Failure is not an option. Everyone has to succeed."<br>-Arnold Schwarzenegger</p>
+                <div class="button1">
+                    <a href="register.html"><input type="submit" name="Submit" value="Create an Account"></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="login-page">
+                <div class="login-title">
+                    <h4 class="title">Registered Admin</h4>
+                    <div id="loginbox" class="loginbox">
+                        <form action="CheckLoginAdmin" method="post" name="login" id="login-form">
+                            <fieldset class="input">
+                                <p id="login-form-username">
+                                    <label for="modlgn_username">Email</label>
+                                    <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off">
+                                </p>
+                                <p id="login-form-password">
+                                    <label for="modlgn_passwd">Password</label>
+                                    <input id="modlgn_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off">
+                                </p>
+                                <div class="remember">
+                                    <p id="login-form-remember">
+                                        <label for="modlgn_remember"><a href="#">Forget Your Password ? </a></label>
+                                    </p>
+                                    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+

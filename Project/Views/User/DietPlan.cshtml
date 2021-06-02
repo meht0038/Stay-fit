@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "DietPlan";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+
+<div class="main">
+    <div class="about_banner_img"><img src="~/images/blog_img1.jpg" class="img-responsive" alt="" /></div>
+    <div class="about_banner_wrap">
+        <h1 class="m_11">Diet Plan</h1>
+    </div>
+</div>
+
+
+<form action="DietPlan" method="post" enctype="multipart/form-data">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading">Exercise</div>
+        <div class="panel-body">
+            <fieldset class="input">
+
+                
+                <p id="login-form-username">
+                    <label for="modlgn_username">Main Category </label>
+                    @Html.DropDownList("Name", ViewBag.NameList as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control", onchange = "document.forms[0].submit();" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Gender</label>
+                    <div class="inputbox">
+                        <input id="modlgn_username" type="radio" name="gender" value="Male" size="18">Male
+                        <input id="modlgn_username" type="radio" name="gender" value="Female" size="18">Female
+                    </div>
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Age</label>
+                    <div class="inputbox">
+                        <input id="modlgn_username" type="radio" name="Age" value="15-25" size="18">15-25
+                        <input id="modlgn_username" type="radio" name="Age" value="26-40" size="18">26-40
+                        <input id="modlgn_username" type="radio" name="Age" value="41-60" size="18">41-60
+                    </div>
+                </p>
+
+
+
+
+                <p id="login-form-username">
+
+
+                    <input type="submit" style="float:left" name="Submit" formaction="DietPlanDetails" formmethod="post" class="button" value="Select"><div class="clear"></div>
+                </p>
+
+                <img src="@TempData["imgsrc"]" />
+
+            </fieldset>
+        </div>
+    </div>
+</form>
+

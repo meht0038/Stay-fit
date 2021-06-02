@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "UserProfileEmpty";
+    Layout = "~/_LayoutUser.cshtml";
+}
+<br />
+
+<form action="SaveProfile" method="post" enctype="multipart/form-data">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading">Profile Page</div>
+        <div class="panel-body">
+            <fieldset class="input">
+                <p id="login-form-username">
+                    <label for="modlgn_username">FullName</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter FullName"  name="FullName" class="inputbox" size="18">
+                </p>
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Address</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Address"  name="Address" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Email</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Email"  name="Email" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Date of Birth</label>
+                    <input id="modlgn_username" type="text" placeholder="DD-MM-YYYY"  name="DateofBirth" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Blood Group</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter BloodGroup"  name="BloodGroup" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Gender</label>
+                    <div class="inputbox">
+                        <input id="modlgn_username" type="radio" name="gender" value="Male"  size="18">Male
+                        <input id="modlgn_username" type="radio" name="gender" value="Female" size="18">Female
+                    </div>
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Status</label>
+                    <div class="inputbox">
+                        <input id="modlgn_username" type="radio" name="Status" value="Married"  size="18">Married
+                        <input id="modlgn_username" type="radio" name="Status" value="Unmarried" size="18">Unmarried
+                    </div>
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Age</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Age"  name="Age" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Height</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Height in inch"  name="Height" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Weight</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Weight in Kg"  name="Weight" class="inputbox" size="18">
+                </p>
+
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Uplaod Photo</label>
+                    <input id="modlgn_username" type="file" name="postedFile" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <input type="submit" style="float:left" name="Submit" class="button" value="Save"><div class="clear"></div>
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</form>

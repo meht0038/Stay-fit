@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+<div class="register-grids">
+    <div class="container">
+        <form action="GEtRegister" method="post">
+            <div class="register-top-grid">
+                <h3>PERSONAL INFORMATION</h3>
+                <div>
+                    <span>First Name<label>*</label></span>
+                    <input name="fname" id="fname" type="text">
+                </div>
+                <div>
+                    <span>Last Name<label>*</label></span>
+                    <input name="lname" id="lname" type="text">
+                </div>
+                <div>
+                    <span>Email Address<label>*</label></span>
+                    <input name="email" id="email" type="text">
+                </div>
+                <div>
+                    <span>Mobile No<label>*</label></span>
+                    <input  name="mobile" id="mobile" type="text">
+                </div>
+                <div class="clear"> </div>
+              
+            </div>
+            <div class="clear"> </div>
+            <div class="register-bottom-grid">
+                <h3>LOGIN INFORMATION</h3>
+                <div>
+                    <span>Password<label>*</label></span>
+                    <input name="password" id="password" type="text">
+                </div>
+                <div>
+                    <span>Confirm Password<label>*</label></span>
+                    <input name="cpassword" id="cpassword" type="text">
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</div>

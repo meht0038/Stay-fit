@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT ('VideoData', RESEED, 0)

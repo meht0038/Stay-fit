@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "TrainerProfile";
+    Layout = "~/_LayoutAdmin.cshtml";
+}
+
+<form action="SaveTrainerProfile" method="post" enctype="multipart/form-data">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading">Trainer Profile</div>
+        <div class="panel-body">
+            <fieldset class="input">
+                <p id="login-form-username">
+                    <label for="modlgn_username">Name</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Name" name="Name" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Type of Trainer</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Type of Trainer" name="TypeofTrainer" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Quote</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Quote" name="Quote" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Qualifications</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Qualifications" name="Qualifications" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Speciality</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Speciality" name="Speciality" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Trainer Photo</label>
+                    <input id="modlgn_username" type="file" name="postedFile" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <input type="submit" style="float:left" class="button" value="Save"><div class="clear"></div>
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</form>

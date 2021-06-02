@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "BodyMassIndex";
+    Layout = "~/_LayoutUser.cshtml";
+}
+<br />
+<br />
+
+
+<form action="GetBodyMassIndex" method="post">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <h2 style="color:rgb(169, 0, 241)">Calculate your BMR</h2>
+        <div class="panel-body">
+            <fieldset class="input">
+
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Height</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Height in inches" name="Height" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Weight</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Weight in Kg" name="Weight" class="inputbox" size="18">
+                </p>
+
+
+
+                <div class="clear"> </div>
+                <input type="submit" style="float:left" name="Calcuate Your BMI and BMR" class="button" value="Calcuate Your BMI"><div class="clear"></div>
+
+                <br />
+                @if (Convert.ToString(Session["bmi"]) != "")
+                {
+
+                    <p id="login-form-username">
+                        <label for="modlgn_username">Your BodyMassIndex </label>
+                        <input id="modlgn_username" type="text" value="@Convert.ToString(Session["bmi"])" name="bmi" class="inputbox" size="18">
+                    </p>
+                    Session["bmi"] = "";
+
+
+                }
+                @if (Convert.ToString(Session["bmr"]) != "")
+                {
+
+                    <p id="login-form-username">
+                        <label for="modlgn_username">Your Basal Metabollic Rate </label>
+                        <input id="modlgn_username" type="text" value="@Convert.ToString(Session["bmr"])" name="bmr" class="inputbox" size="18">
+                    </p>
+                    Session["bmr"] = "";
+                }
+
+                <img src="~/images/bmi-category.png" width="750" height="500" alt="" />
+
+
+            </fieldset>
+        </div>
+    </div>
+    </form>

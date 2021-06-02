@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT ('SubSubCategory', RESEED, 0)

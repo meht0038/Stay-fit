@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Exercise";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+<form action="Exercise" method="post" enctype="multipart/form-data">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading" style="color:rgb(169, 0, 241)">Exercise</div>
+        <div class="panel-body">
+            <fieldset class="input">
+
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Select your Plan </label>
+                    @Html.DropDownList("Name", ViewBag.NameList as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control", onchange = "document.forms[0].submit();" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Categories </label>
+                    @Html.DropDownList("sub", ViewBag.sublist as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control", onchange = "document.forms[0].submit();" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Exercises </label>
+                    @Html.DropDownList("subsub", ViewBag.subsublist as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control" })
+                </p>
+
+
+
+
+
+                <p id="login-form-username">
+
+
+                    <input type="submit" style="float:left" name="Submit" formaction="VedioAndImg" formmethod="post" class="button" value="Select"><div class="clear"></div>
+                </p>
+
+
+
+            </fieldset>
+        </div>
+    </div>
+</form>
+<br/>
+<br/>
+<div class="login">
+    <div class="row login_details">
+        <div class="col-md-6">
+            <div class="join">
+                <h3>Body Mass Index</h3>
+                <h4> Huge health benefits</h4>
+                <p>BMI is a person's weight in kilograms (kg) divided by his or her height in meters squared. </p>
+                <div class="btn3">
+                    <br />
+                    <a href="BodyMassIndex">Check Your BMI</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="join-right">
+                <h3>Basal Metabolic Rate</h3>
+                <h4> Reducing the risk of heart disease. </h4>
+                <p>Your basal metabolic rate (BMR) is defined as the rate at which your body uses energy when you are resting.</p>
+                <div class="btn3">
+                    <br />
+                    <a href="BMR">Check your BMR</a>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<div class="testimonial">
+    <div class="container">
+        <i class="quot"> </i>
+        <p>
+            “The Iron never lies to you. You can walk outside and listen to all
+            kinds of talk, get told that you’re a god or a total bastard. The Iron
+            will always kick you the real deal. The Iron is the great reference
+            point, the all-knowing perspective giver. Always there like a beacon in
+            the pitch black. I have found the Iron to be my greatest friend. It
+            never freaks out on me, never runs. Friends may come and go. But two
+            hundred pounds is always two hundred pounds.”
+          
+        </p>
+        <p class="ceo">QUOTE BY - <span class="ceo1">Henry Rollins</span></p>
+    </div>
+</div>

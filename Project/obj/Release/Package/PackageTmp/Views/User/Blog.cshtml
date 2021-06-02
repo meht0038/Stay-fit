@@ -1,0 +1,83 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Blog";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+<div class="main">
+    <div class="about_banner_img"><img src="~/images/blog_img1.jpg" class="img-responsive" alt="" /></div>
+    <div class="about_banner_wrap">
+        <h1 class="m_11">Blog</h1>
+    </div>
+</div>
+
+    @model List<Project.Models.Blog>
+    @{
+        ViewBag.Title = "Blog";
+        Layout = "~/_LayoutUser.cshtml";
+    }
+
+
+
+
+
+    @foreach (var s in Model)
+    {
+
+        string BlogImage = "data:image/jpg;base64," + Convert.ToBase64String((byte[])@s.BlogImage);
+        <div class="blog_box">
+            <div class="blog_grid">
+                <h3><a href="blog_single.html">@s.BlogTitle </a></h3>
+                <h3><a href="blog_single.html">@s.Email</a></h3>
+                <a href="blog_single.html"><img src='@BlogImage' width="400" height="400" controls></a>
+                <div class="singe_desc">
+                    <p>@s.BlogDescription</p>
+                    <div class="comments">
+                        <ul class="links">
+                            <li><a href="#"><i class="blog_icon1"> </i><br><span>@s.BlogDate</span></a></li>
+                            <li><a href="#"><i class="blog_icon3"> </i><br><span>@s.Likes</span></a></li>
+                            <li><a href="Comment"><i class="blog_icon4"> </i><br><span>@s.Comments</span></a></li>
+                        </ul>
+                        <div class="btn_blog">
+                            <a href="Comment?id=@s.Email">Read More</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+
+
+    <form action="SaveBlog" method="post" enctype="multipart/form-data">
+        <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+            <div class="panel-heading">Blog</div>
+            <div class="panel-body">
+                <fieldset class="input">
+                    <p id="login-form-username">
+                        <label for="modlgn_username">Blog Title</label>
+                        <input id="modlgn_username" type="text" placeholder="Enter Blog Title" name="BlogTitle" class="inputbox" size="18">
+                    </p>
+
+                    <p id="login-form-username">
+                        <label for="modlgn_username">Blog Description</label>
+                        <input id="modlgn_username" type="text" placeholder="Enter Blog Description" name="BlogDescription" class="inputbox" size="18">
+                    </p>
+
+                    <p id="login-form-username">
+                        <label for="modlgn_username">Image</label>
+                        <input id="modlgn_username" type="file" name="postedFile" class="inputbox" size="18">
+
+                    </p>
+                    <p id="login-form-username">
+                        <input type="submit" style="float:left" name="Submit" class="button" value="Upload"><div class="clear"></div>
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+    </form>

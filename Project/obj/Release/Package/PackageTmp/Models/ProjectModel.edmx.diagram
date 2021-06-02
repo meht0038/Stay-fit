@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3177a61e9c1d46e2b88d7df9d71d57a1" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectDBModel.AdminRegister" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.Blog" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.Comment" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.Contact" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.Exercise" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.ImageData" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.MainCategory" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.MemberShip" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.SubCategory" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.SubSubCategory" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.Table" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.UserProfile" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.UserRegister" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjectDBModel.VideoData" Width="1.5" PointX="8.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

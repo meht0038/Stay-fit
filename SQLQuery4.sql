@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT ('ImageData', RESEED, 0)

@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "BMR";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+
+
+
+
+<br />
+<br />
+
+
+<form action="GetBMR" method="post">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <h2 style="color:rgb(169, 0, 241)">Calculate your BMI</h2>
+        <div class="panel-body">
+            <fieldset class="input">
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">Gender</label>
+                    <div class="inputbox">
+                        <input id="modlgn_username" type="radio" name="gender" value="Male" size="18">Male
+                        <input id="modlgn_username" type="radio" name="gender" value="Female" size="18">Female
+                    </div>
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Height</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Height in cm" name="Height" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Weight</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Weight in Kg" name="Weight" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Age</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Age" name="Age" class="inputbox" size="18">
+                </p>
+
+
+                <div class="clear"> </div>
+                <input type="submit" style="float:left" name="Calcuate Your  BMR" class="button" value="Calcuate Your BMI"><div class="clear"></div>
+
+                <br />
+
+                @if (Convert.ToString(Session["bmr"]) != "")
+                {
+
+                    <p id="login-form-username">
+                        <label for="modlgn_username">Your Basal Metabollic Rate </label>
+                        <input id="modlgn_username" type="text" value="@Convert.ToString(Session["bmr"])" name="bmr" class="inputbox" size="18">
+                    </p>
+                    Session["bmr"] = "";
+                }
+
+
+
+                <img src="~/images/bmr3.png" width="550" height="510" alt="" />
+
+            </fieldset>
+        </div>
+    </div>
+</form>

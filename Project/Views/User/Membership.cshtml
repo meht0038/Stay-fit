@@ -1,0 +1,87 @@
+﻿@model Project.Models.MemberShip
+
+@{
+    ViewBag.Title = "Membership";
+    Layout = "~/_LayoutUser.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+
+        $('#rdo1').change(function () {
+            //do something here
+            $('#Fee').val('FREE');
+        });
+
+        $('#rdo3').change(function () {
+            //do something here
+            $('#Fee').val('100');
+        });
+        $('#rdo6').change(function () {
+            //do something here
+            $('#Fee').val('200');
+        });
+        $('#rdo12').change(function () {
+            //do something here
+            $('#Fee').val('300');
+        });
+    });
+</script>
+
+<br />
+
+<form action="SaveMembership" method="post">
+    <div class="panel panel-default" style="margin-right:20px;margin-left:20px">
+        <div class="panel-heading">Membership Form</div>
+        <div class="panel-body">
+            <fieldset class="input">
+
+                <p id="login-form-username">
+                    <label for="modlgn_username">MainCategory</label>
+                    @Html.DropDownList("cat", ViewBag.NameList as IEnumerable<SelectListItem>, "Please select", new { @class = "form-control" })
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Period</label>
+                    <div class="inputbox">
+                        <input id="rdo1" type="radio" name="Period" value="1 month" size="18">1 month
+                        <input id="rdo3" type="radio" name="Period" value="3 months" size="18">3 months
+                        <input id="rdo6" type="radio" name="Period" value="6 months" size="18">6 months
+                        <input id="rdo12" type="radio" name="Period" value="1 year" size="18">1 year
+                    </div>
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Fee</label>
+                    <input id="Fee" type="text" placeholder="Enter Fee" name="Fee" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Start Date</label>
+                    <input id="modlgn_username" type="text" placeholder="DD-MM-YYYY" name="StartDate" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Payment</label>
+                    <div class="inputbox">
+                        <input id="modlgn_username" type="radio" name="Payment" value="Debit Card" size="18">Debit Card
+                        <input id="modlgn_username" type="radio" name="Payment" value="Credit Card" size="18">Credit Card
+                    </div>
+                </p>
+                <Br />
+                <p id="login-form-username">
+                    <label for="modlgn_username">Card Number</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter Card Number" name="CardNumber" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">Expiry/Validity Date</label>
+                    <input id="modlgn_username" type="text" placeholder="mm-yy" name="ExpiryDate" class="inputbox" size="18">
+                </p>
+                <p id="login-form-username">
+                    <label for="modlgn_username">CVV</label>
+                    <input id="modlgn_username" type="text" placeholder="Enter CVV" name="CVV" class="inputbox" size="18">
+                </p>
+
+                <p id="login-form-username">
+                    <input type="submit" style="float:left" class="button" value="Proceed Securely"><div class="clear"></div>
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</form>
